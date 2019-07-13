@@ -1,12 +1,31 @@
 import React from 'react';
 
-const Post = () => ( <div classname="post">
-<p>gdgdg dfbhfhu bjdbgjr hjgrbf</p>
-  <button>Edit</button>
-  <button>Edit</button>
-<p classname="timestamp">Sat Jul 13 2019 09:40:52 GMT+0530 (India Standard Time)</p>
-</div>
-);
 
+class Post extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            text: ""
+        };
+    }
+
+
+    render() {
+        const { onDelete, post } = this.props;
+        const { text } = this.state;
+        console.log("render : ", this.props);
+        
+        return (
+            (<div classname="post">
+                <p>{post.text}</p>
+                <button>Edit</button>
+                <button onClick={() => onDelete(post._id)}>Delete</button>
+                <p classname="timestamp">{post.timestamp}</p>
+            </div>)
+        );
+    }
+
+}
 export default Post;
 
