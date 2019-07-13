@@ -7,9 +7,18 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+.test{
+  color: #3d0417;
+  background-color: #b8e41a;
+  height: 200px;
+}
+.test1{
+  color: #3d0417;
+  background-color: #460a41;
+  height: 200px;
+}
 .App-header {
-  background-color: #282c34;
+  background-color: #39083d;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -30,4 +39,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+body{
+  font: verdana;
+}
+
+.header{
+  background-color: #39083d
 }
